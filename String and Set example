@@ -1,0 +1,79 @@
+fruits = [
+'Apricot',
+'Asian Pear',
+'Avocado',
+'Banana',
+'Blackberries',
+'Blueberries',
+'Boysenberries',
+'Cactus Pear',
+'Cantaloupe',
+'Cherries',
+'Coconut',
+'Cranberries',
+'Figs',
+'Gooseberries',
+'Grapefruit',
+'Grapes',
+'Honeydew Melon',
+'Kiwifruit',
+'Limes',
+'Longan',
+'Loquat',
+'Lychee',
+'Madarins',
+'Malanga',
+'Mandarin Oranges',
+'Mangos',
+'Mulberries',
+'Nectarines',
+'Oranges',
+'Papayas',
+'Passion Fruit',
+'Peaches',
+'Pears',
+'Persimmons',
+'Pineapple',
+'Plums',
+'Pomegranate',
+'Prunes',
+'Quince',
+'Raisins',
+'Raspberries',
+'Rhubarb',
+'Strawberries',
+'Tangelo',
+'Tangerines',
+'Tomato',
+'Ugli Fruit',
+'Watermelon'
+]
+
+intro = 'Welcome to Fruit Finder'
+text_width = len(intro)
+screen_width = 80
+box_width = text_width + 6
+left_margin = (screen_width - box_width) // 2
+print(' ' * left_margin + '*' * text_width)
+print(' ' * left_margin + intro)
+print(' ' * left_margin + '*' * text_width)
+
+print('''We have many fruits on our list''' + str(fruits) +
+'''please choose any fruit you would like us to find''')
+userinput=input('Please enter a sentence with a fruit in it: ')
+A = userinput.split(' , ')
+
+user_fruit_input = list(set(fruits)&set(A))
+print('Number of fruits in your sentence are: ', len(user_fruit_input))
+
+print('Your fruit that was selected is :', user_fruit_input)
+
+
+A.insert(2,str(', Brussels Sprouts ,'))
+del(A[0])
+final_input = ' '.join(A)
+print('or what you could have is:', final_input)
+
+
+
+exit()
